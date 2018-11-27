@@ -164,7 +164,6 @@ def player_numbers(team_name)
   jersey_number[:number]
     binding.pry
   }
-  
 end
 
 def player_stats(player_name)
