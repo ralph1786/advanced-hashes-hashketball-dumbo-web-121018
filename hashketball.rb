@@ -121,6 +121,17 @@ def get_player_method
   get_all_players = game_hash[:home][:players].merge(game_hash[:away][:players])
 end
 
+def player_by_number(number)
+  get_player_method.each do |name, stats|
+    # binding.pry
+    if stats[:number] == number
+      p name
+    end
+  end
+end
+
+player_by_number(33)
+
 def num_points_scored(player_name)
   current_player = get_player_method.fetch(player_name)
   current_player.fetch(:points)
