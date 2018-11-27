@@ -142,8 +142,8 @@ def shoe_size(player_name)
 end
 
 def get_team_helper(team_name)
-  binding.pry
   teams = game_hash.values
+  binding.pry
   teams.find {|team| team.fetch(:team_name) == team_name}
 end
 
