@@ -123,7 +123,7 @@ end
 
 def player_by_number(number)
   get_player_method.each do |name, stats|
-    # binding.pry
+    binding.pry
     if stats[:number] == number
       p name
     end
