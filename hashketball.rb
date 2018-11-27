@@ -123,7 +123,6 @@ end
 
 def player_by_number(number)
   get_player_method.each do |name, stats|
-    
     if stats[:number] == number
       p name
     end
@@ -143,6 +142,7 @@ def shoe_size(player_name)
 end
 
 def get_team_helper(team_name)
+  binding.pry
   teams = game_hash.values
   teams.find {|team| team.fetch(:team_name) == team_name}
 end
