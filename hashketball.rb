@@ -126,9 +126,6 @@ def player_by_number(number)
     # binding.pry
     if stats[:number] == number
       p name
-    # else
-    #   p "No player with that number."
-    #   break
     end
   end
 end
