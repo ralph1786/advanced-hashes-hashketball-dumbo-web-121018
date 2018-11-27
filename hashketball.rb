@@ -132,7 +132,7 @@ def player_by_number(number)
   end
 end
 
-player_by_number(33)
+player_by_number(55)
 
 def num_points_scored(player_name)
   current_player = get_player_method.fetch(player_name)
