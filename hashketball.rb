@@ -154,8 +154,8 @@ end
 
 def team_names
   teams = game_hash.values
-  binding.pry
   teams.map { |team|
+  binding.pry
     team.fetch(:team_name)
   }
 end
