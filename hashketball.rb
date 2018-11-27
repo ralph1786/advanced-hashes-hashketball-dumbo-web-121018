@@ -160,8 +160,9 @@ def team_names
 end
 
 def player_numbers(team_name)
-  binding.pry
-  get_team_helper(team_name)[:players].map{ |player_name, jersey_number| jersey_number[:number]}
+  get_team_helper(team_name)[:players].map{ |player_name, jersey_number|
+    binding.pry
+  jersey_number[:number]}
 end
 
 def player_stats(player_name)
