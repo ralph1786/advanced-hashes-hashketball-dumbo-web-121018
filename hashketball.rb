@@ -123,6 +123,7 @@ end
 
 def player_by_number(number)
   get_player_method.each do |name, stats|
+    binding.pry
     if stats[:number] == number
       p name
     end
@@ -155,7 +156,6 @@ end
 def team_names
   teams = game_hash.values
   teams.map { |team|
-  binding.pry
     team.fetch(:team_name)
   }
 end
