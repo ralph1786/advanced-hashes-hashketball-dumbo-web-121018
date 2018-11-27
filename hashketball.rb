@@ -144,11 +144,11 @@ end
 def get_team_helper(team_name)
   teams = game_hash.values
   teams.find {|team| 
-  binding.pry
   team.fetch(:team_name) == team_name}
 end
 
 def team_colors(team_name)
+  binding.pry
   current_team = get_team_helper(team_name)
   current_team.fetch(:colors)
 end
