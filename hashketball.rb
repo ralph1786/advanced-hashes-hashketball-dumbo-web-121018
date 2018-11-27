@@ -148,8 +148,8 @@ def get_team_helper(team_name)
 end
 
 def team_colors(team_name)
-  binding.pry
   current_team = get_team_helper(team_name)
+  binding.pry
   current_team.fetch(:colors)
 end
 
