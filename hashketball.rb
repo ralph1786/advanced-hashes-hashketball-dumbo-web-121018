@@ -121,6 +121,16 @@ def get_player_method
   get_all_players = game_hash[:home][:players].merge(game_hash[:away][:players])
 end
 
+def player_by_number(number)
+  get_player_method.each do |name, stats|
+    if stats[:number] == number
+      p name
+    end
+  end
+end
+
+player_by_number(8)
+
 def num_points_scored(player_name)
   current_player = get_player_method.fetch(player_name)
   current_player.fetch(:points)
@@ -133,7 +143,8 @@ end
 
 def get_team_helper(team_name)
   teams = game_hash.values
-  teams.find {|team| team.fetch(:team_name) == team_name}
+  teams.find {|team| 
+  team.fetch(:team_name) == team_name}
 end
 
 def team_colors(team_name)
@@ -149,7 +160,9 @@ def team_names
 end
 
 def player_numbers(team_name)
-  get_team_helper(team_name)[:players].map{ |player_name, jersey_number| jersey_number[:number]}
+  get_team_helper(team_name)[:players].map{ |player_name, jersey_number|
+  jersey_number[:number]
+  }
 end
 
 def player_stats(player_name)
